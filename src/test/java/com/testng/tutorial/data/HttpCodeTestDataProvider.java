@@ -4,9 +4,9 @@ import org.testng.annotations.DataProvider;
 
 public class HttpCodeTestDataProvider {
 
-    @DataProvider(name = "Success codes")
+    @DataProvider(name = "Success codes", parallel = true)
     public static Object[][] successCodes() {
-        return new Object[][] {
+        return new Object[][]{
                 {200, "OK"},
                 {201, "Created"},
                 {202, "Accepted"},

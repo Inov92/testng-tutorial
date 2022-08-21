@@ -1,0 +1,8 @@
+<suite name="Parallel tests" parallel="methods" thread-count="4" data-provider-thread-count="4" verbose="5">
+    <test name="Multi thread tests">
+        <classes>
+            <class name="com.testng.tutorial.tests.ParallelTests"/>
+            <class name="com.testng.tutorial.tests.ParametrizedTests"/>
+        </classes>
+    </test>
+</suite>

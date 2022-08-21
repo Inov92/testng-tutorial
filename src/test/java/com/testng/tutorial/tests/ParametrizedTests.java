@@ -21,11 +21,13 @@ public class ParametrizedTests extends AbstractTestContextTests {
 
     @Test(dataProvider = "httpCodeProvider")
     public void innerDataProviderUsage(int httpCode, String description) {
+        log.info("General codes test" + Thread.currentThread().getName());
         log.info(String.format("%d: %s", httpCode, description));
     }
 
     @Test(dataProvider = "Success codes", dataProviderClass = HttpCodeTestDataProvider.class)
     public void externalDataProviderUsage(int httpCode, String description) {
+        log.info("Success codes test" + Thread.currentThread().getName());
         log.info(String.format("%d: %s", httpCode, description));
     }
 
