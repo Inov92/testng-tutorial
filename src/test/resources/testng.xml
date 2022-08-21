@@ -1,0 +1,9 @@
+<suite name="Parametrized tests" verbose="5">
+    <parameter name="code"  value="404"/>
+    <parameter name="description"  value="Not Found"/>
+    <test name="LSBS tests">
+        <classes>
+            <class name="com.testng.tutorial.tests.ParametrizedTests"/>
+        </classes>
+    </test>
+</suite>
