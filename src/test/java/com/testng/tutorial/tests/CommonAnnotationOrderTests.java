@@ -2,6 +2,7 @@ package com.testng.tutorial.tests;
 
 import org.testng.annotations.*;
 
+import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 public class CommonAnnotationOrderTests extends AbstractTestContextTests {
@@ -31,9 +32,14 @@ public class CommonAnnotationOrderTests extends AbstractTestContextTests {
         log.info("First test method is called");
     }
 
-    @Test
+    @Test(enabled = false, description = "Enable test to check how annotated tes methods depends on failed test")
     public void verifyAlwaysFailedAssertion() {
         fail("Test should always fail");
+    }
+
+    @Test
+    public void verifyAlwaysPassAssertion() {
+        assertTrue(true, "Test should always pass");
     }
 
     @AfterMethod
